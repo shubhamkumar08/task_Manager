@@ -16,7 +16,7 @@ async function addTask(){
         },
         body: JSON.stringify({ title, description, due_date, priority })
     })
-    window.location.replace("http://localhost:2323/");
+    window.location.replace("http://localhost:3333/");
 }
 
 async function editTask(id){

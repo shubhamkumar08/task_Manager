@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task and Notes Manager</title>
-    <link rel="stylesheet" href="style.css">
     <script async defer src="onload.js"></script>
     <script async defer src="taskService.js"></script>
     <script async defer src="notesService.js"></script>
@@ -14,35 +13,15 @@
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     
 </head>
-<body>
+<body style="background-color:aquamarine";>
     <body>
-      <div class="upper">
-      <h1 align="center">Tasks List</h1>
-        <div class="container">
-            <table id="data" class="table table-bordered table-dark">
-            <thead>
-              <tr>
-                <th scope="col">Title</th>
-                <th scope="col">Description</th>
-                <th scope="col" onclick="sortTable(2)" style="cursor: pointer; text-decoration: underline;">Due Date</th>
-                <th scope="col" onclick="sortTable(3)" style="cursor: pointer; text-decoration: underline;">Status</th>
-                <th scope="col" onclick="sortTable(4)" style="cursor: pointer; text-decoration: underline;">Priority</th>
-                <th scope="col">Notes</th>
-                <th scope="col">Edit</th>
-              </tr>
-            </thead>
-            <tbody>
-            </tbody>
-          </table>
-            <br><br>
-            <h3><a href="#addTask" style="float: right; margin: 10px; text-decoration: underline;">Add Task</a></h3>
-            <br><br><br><br><br><br><br><br><br>
-        </div>
-      </div>
       <div id="addTask">
         <br>
         <div id="taskForm">
-            <h3 align="center">Fill these details to add any task</h3>
+          <h3><a href="#addTask" style="float: right; margin: 10px; text-decoration: underline;">Add Task</a></h3>
+          <br><br>
+            <h3 style="text-align:center"><b>Fill Details To Add New Task</b>></h3>
+            <br>
             <form action="javascript:;" onsubmit="addTask(this)">
                 Title: <input type="text" id="title" placeholder="Enter title" required>
                 <br><br>
@@ -110,7 +89,26 @@
           </div>
         </div>
       </div>
-
+      <div class="upper">
+        <h1 style="text-align:center">Tasks List</h1>
+          <div class="container">
+              <table id="data" class="table table-bordered table-dark">
+              <thead>
+                <tr>
+                  <th scope="col">Title</th>
+                  <th scope="col">Description</th>
+                  <th scope="col" onclick="sortTable(2)" style="cursor: pointer; text-decoration: underline;">Due Date</th>
+                  <th scope="col" onclick="sortTable(3)" style="cursor: pointer; text-decoration: underline;">Status</th>
+                  <th scope="col" onclick="sortTable(4)" style="cursor: pointer; text-decoration: underline;">Priority</th>
+                  <th scope="col">Notes</th>
+                  <th scope="col">Edit</th>
+                </tr>
+              </thead>
+              <tbody>
+              </tbody>
+            </table>
+          </div>
+        </div>
     </body>
 </body>
 </html>
